@@ -1,0 +1,31 @@
+<div class="success" ng-show="$ctrl.successMessage" ">
+    {{ $ctrl.successMessage }}
+</div>
+
+<div class="form-img">
+    <div class="contact-image">
+        <img src="Images/contactUs-img.jpg">
+    </div>
+<div class="form">
+
+
+    
+    <form ng-submit="$ctrl.submitForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" ng-model="formData.name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" ng-model="formData.email" required>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" ng-model="formData.message" rows="4" required></textarea>
+    
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</div>
+
+   
+
+    
+</div>

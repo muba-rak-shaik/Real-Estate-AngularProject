@@ -1,0 +1,25 @@
+<div class="hotel-details">
+    <h2 id="hotel-title">{{ $ctrl.hotel.name }} Details</h2>
+    <img id="hotel-detail-img" ng-src="{{ $ctrl.hotel.imagePath }}">
+
+        <p> <span class="listings"> Address:</span> {{ $ctrl.hotel.address }}</p>
+        <p> <span class="listings">Price: </span>{{ $ctrl.hotel.price | currency:"INR₹" }}</p>
+        <!-- <p>Details: {{$ctrl.hotel.details}}</p> -->
+
+
+
+
+    <div  ng-if="$ctrl.weatherDetails">
+        <p>  <span class="listings">City: </span>{{$ctrl.weatherDetails.name}}</p>
+        <p>  <span class="listings">Temperature:</span> {{$ctrl.weatherDetails.main.temp}} °C</p>
+        <p>  <span class="listings">Wind Speed: </span> {{$ctrl.weatherDetails.wind.speed}} m/s</p>
+        <p>  <span class="listings">Precipitation: </span>{{$ctrl.weatherDetails.weather[0].description}}</p>
+        </div>
+
+        <div  ng-if="$ctrl.error">
+        <p>{{$ctrl.error}}</p>
+        </div>
+    
+
+
+</div>

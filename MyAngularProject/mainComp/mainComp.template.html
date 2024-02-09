@@ -1,0 +1,26 @@
+<div>
+   <div class="search" >
+      <input type="text" ng-model="query">
+      <button type="submit">Search</button>
+  </div>
+
+  <a ng-repeat="hotel in $ctrl.hotels| filter: query" ng-href="#!hotel/{{hotel.id}}">
+
+   <div class="hotel-container">
+    
+         <img id="c" ng-src="{{ hotel.imagePath}}">
+    
+      
+      <div class="hotel-specs">
+
+     
+      <h3 id="hotel-name">{{hotel.name}}</h3>
+      <p id="hotel-address">{{hotel.address}}</p>
+      <p id="price">{{hotel.price| currency:"INR₹"}}</p>
+   </div>
+      
+   
+   </div>
+  </a>
+
+</div>
